@@ -14,6 +14,7 @@ public class ConvertActionGroup extends ActionGroup {
 			new Hex(),
 			new Oct(),
 			new Bin(),
+			new Ascii(),
 		};
 	}
 
@@ -38,6 +39,12 @@ public class ConvertActionGroup extends ActionGroup {
 	public static class Bin extends ConvertAction {
 		public Bin() {
 			super(ConvertType.NumeralSystem.BIN);
+		}
+	}
+
+	public static class Ascii extends ConvertAction {
+		public Ascii() {
+			super(ConvertType.NumeralSystem.ASCII);
 		}
 	}
 

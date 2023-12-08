@@ -26,11 +26,17 @@ public final class ConvertType {
 				return "DEC";
 			}
 		},
+		ASCII {
+			@Override
+			public String toString() {
+				return "ASCII";
+			}
+		},
 	}
 
-	private static final String[] typeStarts = {"0x", "0b", "0", ""};
+	private static final String[] typeStarts = {"0x", "0b", "0", "", ""};
 
-	private static final int[] typeRadixes = {16, 2, 8, 0};
+	private static final int[] typeRadixes = {16, 2, 8, 0, 0};
 
 	public static String startWith(NumeralSystem type) {
 		return typeStarts[type.ordinal()];
